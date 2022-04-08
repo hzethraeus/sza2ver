@@ -27,7 +27,7 @@ export default function Home() {
         <Link href="/about/about">
            <a>Szabina Loki</a>
           </Link>
-          <p>Hej</p>
+          
         </h1>
         </Section>
         
