@@ -1,0 +1,15 @@
+.headerAll {
+  padding: 20px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rightSideMenu {
+  padding-right: 10px;
+}
+
+.rightSideMenu a {
+  padding-right: 30px;
+}

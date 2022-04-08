@@ -1,0 +1,11 @@
+.longText {
+  width: 75%;
+  font-weight: 300;
+}
+
+.quote {
+  padding: 30px;
+  margin-left: 15px;
+  font-weight: 200;
+  font-style: oblique;
+}

@@ -1,0 +1,22 @@
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+.cardImage {
+  padding: 20px;
+}
+
+.cardImage:hover,
+.cardImage:focus,
+.cardImage:active {
+  border-color: #0070f3;
+  padding: 20px;
+}
+
+.logo {
+  height: 1em;
+}
