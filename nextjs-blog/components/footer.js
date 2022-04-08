@@ -6,16 +6,16 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
         <div>
-            <h7>Szabina</h7>
+            <h5>Szabina</h5>
             <h6>
                 Adress <br/>
                 Number <br/>
-                Email
+                Hejsan
             </h6>
         </div>
         
         <div>
-        <h7>Szabina</h7>
+        <h5>Szabina</h5>
             <h6>
                 Adress <br/>
                 Number <br/>
