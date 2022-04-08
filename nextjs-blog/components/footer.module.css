@@ -9,3 +9,9 @@
   margin-top: 10px;
   background-color: #aa9a9a;
 }
+.lowDiv h5 {
+  padding: 0;
+}
+.lowDiv {
+  padding-left: 10px;
+}
