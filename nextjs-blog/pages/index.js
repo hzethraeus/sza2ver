@@ -20,7 +20,7 @@ export default function Home() {
     <div className={styles.container}>
       
       <main>
-        <Title />
+        
         <Section>
         <h1 className={styles.title}>
         SZTUDIO \ {' '}
