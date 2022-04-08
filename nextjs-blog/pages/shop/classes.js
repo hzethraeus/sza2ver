@@ -13,7 +13,10 @@ export default function Classes() {
     <Section>
     <h1>Classes</h1>
     </Section>
-    
+    <Section>
+        
+
+    </Section>
     
     </Layout>
     )
