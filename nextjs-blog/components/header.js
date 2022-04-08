@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header>
         <div className={styles.headerAll}>
-            <Link href="/"><a>
+            <Link href="/"><a className={styles.logoImage}>
                 <Image
             src="/images/j_logo.jpeg" // Route of the image file
             height={144} // Desired size with correct aspect ratio
