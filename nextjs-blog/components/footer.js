@@ -22,9 +22,6 @@ export default function Footer() {
             </h6>
         </div>
         
-        
-        Add some stuff about social media
-    <a href="https://www.instagram.com/szabina.locki/" target="_blank" >Instagram</a>
-  
+       
     </footer>
 )};

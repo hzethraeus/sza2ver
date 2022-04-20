@@ -19,3 +19,8 @@
 .cardImage {
   padding: 20px;
 }
+.welcomeText {
+  width: 75%;
+  justify-content: center;
+  font-size: 2rem;
+}

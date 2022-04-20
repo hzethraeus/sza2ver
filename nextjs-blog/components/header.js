@@ -21,16 +21,13 @@ export default function Header() {
     <Link href="/about/about">
         <a>About</a>
     </Link>
-    <Link href="/shop/shop">
-        <a>Shop</a>
+    <Link href="/portfolio/portfolio">
+        <a>Portfolio</a>
     </Link>
-    <Link href="/shop/classes">
+    <Link href="/classes/classes">
         <a>Classes</a>
     </Link>
 
-    <Link href="/contact/contact">
-        <a>Contact</a>
-    </Link>
     </div>
   </div>
     </header>

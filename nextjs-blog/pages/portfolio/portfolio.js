@@ -1,17 +1,17 @@
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import Section from '../../components/section';
-import styles from './shop.module.css';
+import styles from './portfolio.module.css';
 import Image from 'next/image';
 
-export default function Shop() {
+export default function Portfolio() {
     return (
     <Layout>
     <Head>
         <title>Sztudio \ Shop</title>
     </Head>
     <Section>
-        <h1>Shop</h1>
+        <h1>Portfolio</h1>
 
     </Section>
     <Section>
