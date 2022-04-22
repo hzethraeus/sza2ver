@@ -15,7 +15,7 @@ export default function Classes() {
     <Section>
     <h1>Classes</h1>
     </Section>
-    <Section>
+    
     
     <div className={styles.grid}>
         <div className={styles.cardImage}>
@@ -26,8 +26,9 @@ export default function Classes() {
         width={244} // Desired size with correct aspect ratio
         alt="Your Name"
         />
-         <p>Introduction to throwing, trimming and glazing (first half of May)</p>
+         <p>Introduction to throwing, trimming and glazing.</p>
          <div className={styles.priceButton}>
+             <p>First half of May</p>
              <p>Price</p>
              
           </div>
@@ -42,10 +43,10 @@ export default function Classes() {
         width={244} // Desired size with correct aspect ratio
         alt="Your Name"
         />
-        <p>Introduction to throwing, trimming and glazing (first half of May)</p>
+        <p>Introduction to throwing, trimming and glazing.</p>
         <div className={styles.priceButton}>
+            <p>Second half of May</p>
              <p>Price</p>
-             
           </div>
         </div>
        
@@ -57,9 +58,11 @@ export default function Classes() {
         width={244} // Desired size with correct aspect ratio
         alt="Your Name"
         />
-         <p>Introduction to throwing, trimming and glazing (first half of May)</p>
+         <p>Private class in throwing, trimming and glazing. </p>
          <div className={styles.priceButton}>
+         <p>Date upon request</p>
              <p>Price</p>
+             
              
           </div>
         </div>
@@ -67,7 +70,7 @@ export default function Classes() {
           
         </div>
 
-    </Section>
+    
     
     </Layout>
     )

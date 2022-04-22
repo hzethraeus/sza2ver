@@ -9,8 +9,8 @@
   margin-top: 10px;
   background-color: #aa9a9a;
 }
-.lowDiv h5 {
-  padding: 0;
+.lowDiv h6 {
+  margin-top: -15px;
 }
 .lowDiv {
   padding-left: 10px;

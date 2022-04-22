@@ -8,13 +8,13 @@ export default function Portfolio() {
     return (
     <Layout>
     <Head>
-        <title>Sztudio \ Shop</title>
+        <title>Sztudio \ Portfolio</title>
     </Head>
     <Section>
-        <h1>Portfolio</h1>
+        <h1>+Portfolio</h1>
 
     </Section>
-    <Section>
+    
     
     <div className={styles.grid}>
         <div className={styles.cardImage}>
@@ -56,7 +56,7 @@ export default function Portfolio() {
           
         </div>
 
-    </Section>
+    
     
     
     </Layout>

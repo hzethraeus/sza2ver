@@ -8,19 +8,13 @@ export default function Footer() {
         <div className={styles.lowDiv}>
             <h5>Szabina</h5>
             <h6>
-                Adress <br/>
-                Number <br/>
-                Email
+                Vestmannagade 3, Copenhagen <br/>
+                +45XXXXXXX <br/>
+                xxxx@xxxx.com <br />
+                <a href="https://www.instagram.com/szabina.locki/" target="_blank" >Instagram</a> 
             </h6>
         </div>
-        <div className={styles.lowDiv}>
-            <h5>Social Media</h5>
-            <h6>
-            <a href="https://www.instagram.com/szabina.locki/" target="_blank" >Instagram</a> <br/>
-                Facebook <br/>
-                Hej
-            </h6>
-        </div>
+        
         
        
     </footer>

@@ -20,7 +20,7 @@
   padding: 20px;
 }
 .welcomeText {
-  width: 75%;
-  justify-content: center;
+  text-align: center;
   font-size: 2rem;
+  margin-top: 30px;
 }

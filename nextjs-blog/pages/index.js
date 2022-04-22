@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import Section from '../components/section';
 import styles from './index.module.css';
 import Image from 'next/image';
-import Title from '../components/title';
+
 
 export default function Home() {
   return (
@@ -31,8 +31,9 @@ export default function Home() {
         </h1>
         </Section>
         <Section>
-        <h1 className={styles.title}>
-        Welcome to my web page. <br />
+        <h1 className={styles.welcomeText}>
+          
+        Welcome to my web page. <br /><br/>
 Each piece is designed, handmade and fired at my atelier in Copenhagen.
 <br />
 Follow my journey with clay on  <a href="https://www.instagram.com/szabina.locki/" target="_blank" >Instagram</a>.
