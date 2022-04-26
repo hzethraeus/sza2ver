@@ -3,45 +3,51 @@ import Layout from '../../components/layout';
 import Section from '../../components/section';
 import styles from './classes.module.css';
 import Image from 'next/image';
-import { useEffect } from 'react';
-
-
-
+import { useEffect, useState } from 'react';
 
 export default function Classes() {
-    /*
-    async function getProducts(){
-        const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
     
-        const products = await stripe.products.list({
-          limit: 1,
-        });
-        console.log(products);
-        return (products);
-        
-    }
-    let products= getProducts();
-    */
-    var namn= "";
+    const [kurs, setKurs] = useState("empty");
 
-    useEffect(() => {
-        (async()=>{
-            console.log("nu");
+    const getProducts = async() =>{
+        
+        try{
             const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
-    
+        
             const products = await stripe.products.list({
-                limit: 1,
+              limit: 1,
             });
-        console.log(products);
-        if(products.data!=undefined){
-            namn=products.data.name;
-            console.log(namn);
-            console.log("HEJ");
+            console.log(products);
+            const name = await products.data[0].name;
+            console.log(name);
+            return (name);
+        }catch(err){
+            console.error(err);
         }
-    })
-        console.log("HEJSa");
-    }, []);
-    console.log("YO");
+    }
+    var prodName="";
+    var hasChanged=false;
+    getProducts().then(response => {
+        console.log(typeof response);
+        console.log(response);
+        prodName= response;
+        console.log(prodName);
+        hasChanged=true;
+        setKurs(prodName);
+       
+       
+      });
+
+      useEffect(()=>{
+
+          setKurs(prodName);
+          console.log("inne");
+          
+      
+      },[prodName, hasChanged]);
+
+      
+ 
     return (
     <Layout>
     <Head>
@@ -106,7 +112,10 @@ export default function Classes() {
           
         </div>
         <p>Hej</p>
-        {namn}
+        <p>{kurs}</p>
+        <p>{prodName}</p>
+        
+        
     <p>Tja</p>
     </Layout>
     )
