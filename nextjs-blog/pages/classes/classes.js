@@ -3,9 +3,45 @@ import Layout from '../../components/layout';
 import Section from '../../components/section';
 import styles from './classes.module.css';
 import Image from 'next/image';
+import { useEffect } from 'react';
+
+
 
 
 export default function Classes() {
+    /*
+    async function getProducts(){
+        const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
+    
+        const products = await stripe.products.list({
+          limit: 1,
+        });
+        console.log(products);
+        return (products);
+        
+    }
+    let products= getProducts();
+    */
+    var namn= "";
+
+    useEffect(() => {
+        (async()=>{
+            console.log("nu");
+            const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
+    
+            const products = await stripe.products.list({
+                limit: 1,
+            });
+        console.log(products);
+        if(products.data!=undefined){
+            namn=products.data.name;
+            console.log(namn);
+            console.log("HEJ");
+        }
+    })
+        console.log("HEJSa");
+    }, []);
+    console.log("YO");
     return (
     <Layout>
     <Head>
@@ -69,9 +105,9 @@ export default function Classes() {
          
           
         </div>
-
-    
-    
+        <p>Hej</p>
+        {namn}
+    <p>Tja</p>
     </Layout>
     )
   }

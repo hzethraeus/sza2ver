@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import {useRouter} from 'next/router';
-import Image from 'next/image';
+
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -29,10 +29,7 @@ const CartPage = ()=> {
   return (
     <form action="/api/checkout_sessions" method="POST">
       <section>
-          <div>
-
-
-          </div>
+         
         <button type="submit" role="link">
           Checkout
         </button>
