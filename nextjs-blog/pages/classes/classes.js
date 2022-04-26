@@ -34,16 +34,12 @@ export default function Classes() {
         console.log(prodName);
         hasChanged=true;
         setKurs(prodName);
-       
-       
+
       });
-
       useEffect(()=>{
-
           setKurs(prodName);
           console.log("inne");
-          
-      
+
       },[prodName, hasChanged]);
 
       
