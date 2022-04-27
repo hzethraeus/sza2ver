@@ -25,6 +25,7 @@ const listItems = prices.data.map((element) => {
              <p>{element.unit_amount/100}{element.currency}</p>
           </div>
         </div>
+        
     
 } );  
 
