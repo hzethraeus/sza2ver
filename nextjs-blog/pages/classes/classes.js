@@ -5,36 +5,30 @@ import styles from './classes.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-export default function Classes() {
+function Classes({prices}) {
     
-    const [kurs, setKurs] = useState("empty");
+   
+    console.log(prices.data[0]);
+    //console.log(data[0].product.name);
+    
+const listItems = prices.data.map((element) => {
+    return <div className={styles.cardImage} key={element.id}>
+        <Image 
+        src={element.product.images[0]} // Route of the image file
+        height={144} // Desired size with correct aspect ratio
+        width={244} // Desired size with correct aspect ratio
+        alt="test"
+        />
+         <p>{element.product.description}</p>
+         <div className={styles.priceButton}>
+             <p>First half of May</p>
+             <p>{element.unit_amount/100} {element.currency}</p>
+             
+          </div>
+        </div>
+    
+} );  
 
-    const getProducts = async() =>{
-        
-        try{
-            const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
-        
-            const products = await stripe.products.list({
-              limit: 1,
-            });
-            console.log(products);
-            const name = await products.data[0].name;
-            console.log(name);
-            return (name);
-        }catch(err){
-            console.error(err);
-        }
-    }
-    var prodName="hej";
-    getProducts().then(response => {
-        console.log(typeof response);
-        console.log(response);
-        prodName= response;
-        console.log(typeof prodName);
-        
-        setKurs(prodName);
-      });
-      
       
     return (
     <Layout>
@@ -48,6 +42,7 @@ export default function Classes() {
     
     
     <div className={styles.grid}>
+        
         <div className={styles.cardImage}>
         <Image 
         
@@ -82,11 +77,11 @@ export default function Classes() {
        
         <div className={styles.cardImage}>
         <Image
-        className={styles.cardImage} 
-        src="/images/insta/jbellina.jpg" // Route of the image file
-        height={144} // Desired size with correct aspect ratio
-        width={244} // Desired size with correct aspect ratio
-        alt="Your Name"
+            className={styles.cardImage} 
+            src="/images/insta/jbellina.jpg" // Route of the image file
+            height={144} // Desired size with correct aspect ratio
+            width={244} // Desired size with correct aspect ratio
+            alt="Your Name"
         />
          <p>Private class in throwing, trimming and glazing. </p>
          <div className={styles.priceButton}>
@@ -96,12 +91,37 @@ export default function Classes() {
              
           </div>
         </div>
-         
+        {listItems}
           
         </div>
-        <p>{kurs}</p>
-        <p>{prodName}</p>
+       
+        
         
     </Layout>
     )
   }
+
+export async function getServerSideProps() {
+    // Fetch data from external API
+    /*const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
+        
+    const products = await stripe.products.list({
+      limit: 3,
+    });
+*/
+    const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
+
+    const prices = await stripe.prices.list({
+        limit: 3,
+        active: true,
+        expand: ['data.product']
+    });
+    
+    
+
+  
+    // Pass data to the page via props
+    return { props: { prices } }
+  }
+
+  export default Classes;
