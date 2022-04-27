@@ -21,9 +21,8 @@ const listItems = prices.data.map((element) => {
         />
          <p>{element.product.description}</p>
          <div className={styles.priceButton}>
-             <p>First half of May</p>
-             <p>{element.unit_amount/100} {element.currency}</p>
-             
+             <p>{element.nickname}</p>
+             <p>{element.unit_amount/100}{element.currency}</p>
           </div>
         </div>
     
@@ -43,54 +42,9 @@ const listItems = prices.data.map((element) => {
     
     <div className={styles.grid}>
         
-        <div className={styles.cardImage}>
-        <Image 
         
-        src="/images/insta/jbellina.jpg" // Route of the image file
-        height={144} // Desired size with correct aspect ratio
-        width={244} // Desired size with correct aspect ratio
-        alt="Your Name"
-        />
-         <p>Introduction to throwing, trimming and glazing.</p>
-         <div className={styles.priceButton}>
-             <p>First half of May</p>
-             <p>Price</p>
-             
-          </div>
-        </div>
        
-        <div className={styles.cardImage}>
         
-         <Image 
-         className={styles.cardImage}
-        src="/images/insta/jbellina.jpg" // Route of the image file
-        height={144} // Desired size with correct aspect ratio
-        width={244} // Desired size with correct aspect ratio
-        alt="Your Name"
-        />
-        <p>Introduction to throwing, trimming and glazing.</p>
-        <div className={styles.priceButton}>
-            <p>Second half of May</p>
-             <p>Price</p>
-          </div>
-        </div>
-       
-        <div className={styles.cardImage}>
-        <Image
-            className={styles.cardImage} 
-            src="/images/insta/jbellina.jpg" // Route of the image file
-            height={144} // Desired size with correct aspect ratio
-            width={244} // Desired size with correct aspect ratio
-            alt="Your Name"
-        />
-         <p>Private class in throwing, trimming and glazing. </p>
-         <div className={styles.priceButton}>
-         <p>Date upon request</p>
-             <p>Price</p>
-             
-             
-          </div>
-        </div>
         {listItems}
           
         </div>
@@ -125,3 +79,23 @@ export async function getServerSideProps() {
   }
 
   export default Classes;
+
+  /*
+  <div className={styles.cardImage}>
+        <Image
+            className={styles.cardImage} 
+            src="/images/insta/jbellina.jpg" // Route of the image file
+            height={144} // Desired size with correct aspect ratio
+            width={244} // Desired size with correct aspect ratio
+            alt="Your Name"
+        />
+         <p>Private class in throwing, trimming and glazing. </p>
+         <div className={styles.priceButton}>
+         <p>Date upon request</p>
+             <p>Price</p>
+             
+             
+          </div>
+        </div>
+
+        */

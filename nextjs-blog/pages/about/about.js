@@ -16,7 +16,7 @@ export default function About() {
     <Section>
     <h1>+ Artist Statement</h1>
     </Section>
-    <h2 className={styles.longText}>
+    <div className={styles.longText}>
     Szabinas ceramic journey started in Hawaii while apprenticing in a wood workshop. 
     After finishing her education as a furniture maker she gradually transitioned from wood to clay. 
     <br /> 
@@ -32,7 +32,7 @@ export default function About() {
     While teaching I would like to pass on this energy and motivate others to dive into a tactile language while playing with clay.”
     </div>
 
-    </h2>
+    </div>
     
     </Layout>
     )
