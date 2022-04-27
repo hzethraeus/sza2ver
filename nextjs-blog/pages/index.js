@@ -44,7 +44,7 @@ Follow my journey with clay on  <a href="https://www.instagram.com/szabina.locki
           <div className={styles.cardImage}>
           <Image 
           
-          src="/images/insta/jbellina.jpg" // Route of the image file
+          src="/images/insta/normal_pic.jpg" // Route of the image file
           height={144} // Desired size with correct aspect ratio
           width={244} // Desired size with correct aspect ratio
           alt="Your Name"
@@ -53,7 +53,7 @@ Follow my journey with clay on  <a href="https://www.instagram.com/szabina.locki
           <div className={styles.cardImage}>
           <Image 
           className={styles.cardImage}
-          src="/images/insta/jbellina.jpg" // Route of the image file
+          src="/images/insta/normal_pic.jpg" // Route of the image file
           height={144} // Desired size with correct aspect ratio
           width={244} // Desired size with correct aspect ratio
           alt="Your Name"
@@ -62,7 +62,7 @@ Follow my journey with clay on  <a href="https://www.instagram.com/szabina.locki
           <div className={styles.cardImage}>
           <Image
           className={styles.cardImage} 
-          src="/images/insta/jbellina.jpg" // Route of the image file
+          src="/images/insta/normal_pic.jpg" // Route of the image file
           height={144} // Desired size with correct aspect ratio
           width={244} // Desired size with correct aspect ratio
           alt="Your Name"
@@ -71,7 +71,7 @@ Follow my journey with clay on  <a href="https://www.instagram.com/szabina.locki
           <div className={styles.cardImage}>
           <Image 
           className={styles.cardImage}
-          src="/images/insta/jbellina.jpg" // Route of the image file
+          src="/images/insta/normal_pic.jpg" // Route of the image file
           height={144} // Desired size with correct aspect ratio
           width={244} // Desired size with correct aspect ratio
           alt="Your Name"
