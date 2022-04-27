@@ -25,25 +25,17 @@ export default function Classes() {
             console.error(err);
         }
     }
-    var prodName="";
-    var hasChanged=false;
+    var prodName="hej";
     getProducts().then(response => {
         console.log(typeof response);
         console.log(response);
         prodName= response;
-        console.log(prodName);
-        hasChanged=true;
+        console.log(typeof prodName);
+        
         setKurs(prodName);
-
       });
-      useEffect(()=>{
-          setKurs(prodName);
-          console.log("inne");
-
-      },[prodName, hasChanged]);
-
       
- 
+      
     return (
     <Layout>
     <Head>
@@ -107,12 +99,9 @@ export default function Classes() {
          
           
         </div>
-        <p>Hej</p>
         <p>{kurs}</p>
         <p>{prodName}</p>
         
-        
-    <p>Tja</p>
     </Layout>
     )
   }
