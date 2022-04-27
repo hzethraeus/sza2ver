@@ -28,7 +28,7 @@ export default function Portfolio() {
         </div>
         <div className={styles.cardImage}>
          <Image 
-         className={styles.cardImage}
+         
         src="/images/insta/normal_pic.jpg" // Route of the image file
         height={144} // Desired size with correct aspect ratio
         width={244} // Desired size with correct aspect ratio
@@ -37,7 +37,7 @@ export default function Portfolio() {
         </div>
         <div className={styles.cardImage}>
         <Image
-        className={styles.cardImage} 
+        
         src="/images/insta/normal_pic.jpg" // Route of the image file
         height={144} // Desired size with correct aspect ratio
         width={244} // Desired size with correct aspect ratio
@@ -46,7 +46,7 @@ export default function Portfolio() {
         </div>
          <div className={styles.cardImage}>
          <Image 
-         className={styles.cardImage}
+      
         src="/images/insta/normal_pic.jpg" // Route of the image file
         height={144} // Desired size with correct aspect ratio
         width={244} // Desired size with correct aspect ratio

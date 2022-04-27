@@ -1,6 +1,10 @@
 .longText {
   width: 75%;
   font-weight: 300;
+  font-size: 1.5em;
+  padding-top: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .quote {
@@ -8,4 +12,14 @@
   margin-left: 15px;
   font-weight: 200;
   font-style: oblique;
+  position: relative;
+  z-index: 2;
 }
+.img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  z-index: 0;
+}
+/*Fixa var bilden är!!*/

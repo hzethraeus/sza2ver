@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import Section from '../../components/section';
-
+import Image from 'next/image';
 import styles from './about.module.css';
 
 
@@ -31,7 +31,15 @@ export default function About() {
     I see myself flourishing the most when I have the opportunity to learn new skills and explore new possibilities. 
     While teaching I would like to pass on this energy and motivate others to dive into a tactile language while playing with clay.”
     </div>
-
+    <div className={styles.img}>
+    <Image 
+        
+        src="/images/portrait.jpg" // Route of the image file
+        height={144} // Desired size with correct aspect ratio
+        width={244} // Desired size with correct aspect ratio
+        alt="Your Name"
+    />
+    </div>
     </div>
     
     </Layout>
