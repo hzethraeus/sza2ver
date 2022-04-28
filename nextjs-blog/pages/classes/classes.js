@@ -8,11 +8,8 @@ import { useEffect, useState } from 'react';
 function Classes({prices}) {
     
    
-    //console.log(prices);
     
-    //console.log(data[0].product.name);
     var listItems= "No classes to show right now."
-
     if(prices != null ){
         if(prices.data.length==0){
             console.log("HEJ");
