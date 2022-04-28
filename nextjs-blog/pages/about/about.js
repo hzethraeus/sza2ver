@@ -32,8 +32,8 @@ export default function About() {
     <div className={styles.img}>
         <Image 
             src="/images/portrait.jpg" // Route of the image file
-            height={144} // Desired size with correct aspect ratio
-            width={244} // Desired size with correct aspect ratio
+            height={288} // Desired size with correct aspect ratio
+            width={488} // Desired size with correct aspect ratio
             alt="Your Name"
         />
 

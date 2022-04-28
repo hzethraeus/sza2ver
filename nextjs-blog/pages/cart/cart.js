@@ -8,7 +8,7 @@ import {useRouter} from 'next/router';
 //const stripePromise =
 loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
-const CartPage = (resEl)=> {
+const CartPage = ()=> {
     const router = useRouter();
     const {success, canceled} = router.query;
   useEffect(() => {
