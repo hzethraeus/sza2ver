@@ -75,6 +75,7 @@ export default function Product({resEl}) {
       };
       const handleBuy = () => {
         setOpen(false);
+        
       };
 
 
@@ -143,11 +144,11 @@ export default function Product({resEl}) {
           </Typography>
         </DialogContent>
         <DialogActions >
-            <form action="/api/checkout_sessions" method="POST">
-                <Button autoFocus type="submit" role="link">
+            
+                <Button autoFocus onClick={handleBuy}>
                     Buy Class
                 </Button>
-          </form>
+          
         </DialogActions>
       </BootstrapDialog>
     
