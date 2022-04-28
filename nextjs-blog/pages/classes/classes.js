@@ -8,26 +8,27 @@ import { useEffect, useState } from 'react';
 function Classes({prices}) {
     
    
-    console.log(prices.data[0]);
+    //console.log(prices.data[0]);
     //console.log(data[0].product.name);
-    
-const listItems = prices.data.map((element) => {
-    return <div className={styles.cardImage} key={element.id}>
-        <Image 
-        src={element.product.images[0]} // Route of the image file
-        height={144} // Desired size with correct aspect ratio
-        width={244} // Desired size with correct aspect ratio
-        alt="test"
-        />
-         <p>{element.product.description}</p>
-         <div className={styles.priceButton}>
-             <p>{element.nickname}</p>
-             <p>{element.unit_amount/100}{element.currency}</p>
-          </div>
-        </div>
-        
-    
-} );  
+    var listItems= "No classes to show right now."
+    if(prices!== null){
+        listItems = prices.data.map((element) => {
+            return <div className={styles.cardImage} key={element.id}>
+                <Image 
+                src={element.product.images[0]} // Route of the image file
+                height={144} // Desired size with correct aspect ratio
+                width={244} // Desired size with correct aspect ratio
+                alt="test"
+                />
+                <p>{element.product.description}</p>
+                <div className={styles.priceButton}>
+                    <p>{element.nickname}</p>
+                    <p>{element.unit_amount/100}{element.currency}</p>
+                </div>
+                </div>
+
+        });  
+    }
 
       
     return (
@@ -58,19 +59,23 @@ const listItems = prices.data.map((element) => {
 
 export async function getServerSideProps() {
     // Fetch data from external API
-    /*const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
+    /*const stripe = require('stripe')('');
         
     const products = await stripe.products.list({
       limit: 3,
     });
 */
-    const stripe = require('stripe')('sk_test_51KqwH4BfpTgAZrS3Oq3n9fomMX5HVeYnn9n1IOpzGJpCYtctxQsI4NUclcdfAH4r4tNKfYc2f78ejoBlAgT3LxLl00wmx3GOyK');
-
-    const prices = await stripe.prices.list({
-        limit: 3,
-        active: true,
-        expand: ['data.product']
-    });
+    var prices=null;
+    try{
+        const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+        prices = await stripe.prices.list({
+            limit: 3,
+            active: true,
+            expand: ['data.product']
+        });
+    }catch(err){
+        console.log("Catch" +err);
+    }
     
     
 
