@@ -144,9 +144,9 @@ export default function Product({resEl}) {
         </DialogContent>
         <DialogActions >
             <form action="/api/checkout_sessions" method="POST">
-          <Button autoFocus type="submit" role="link">
-            Buy Class
-          </Button>
+                <Button autoFocus type="submit" role="link">
+                    Buy Class
+                </Button>
           </form>
         </DialogActions>
       </BootstrapDialog>
