@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import Section from '../../components/section';
 import styles from './classes.module.css';
-import Image from 'next/image';
+import Product from '../../components/product.js'
 import { useEffect, useState } from 'react';
 
 function Classes({prices}) {
@@ -13,26 +13,21 @@ function Classes({prices}) {
     //console.log(data[0].product.name);
     var listItems= "No classes to show right now."
 
-    if(prices == null || prices.data.length==0){
-        console.log("HEJ");
-    } else{
+    if(prices != null ){
+        if(prices.data.length==0){
+            console.log("HEJ");
+
+        } else{
         listItems = prices.data.map((element) => {
             return <div className={styles.cardImage} key={element.id}>
-                <Image 
-                src={element.product.images[0]} // Route of the image file
-                height={144} // Desired size with correct aspect ratio
-                width={244} // Desired size with correct aspect ratio
-                alt="test"
+               <Product 
+                resEl={element}
                 />
-                <p>{element.product.description}</p>
-                <div className={styles.priceButton}>
-                    <p>{element.nickname}</p>
-                    <p>{element.unit_amount/100}{element.currency}</p>
-                </div>
                 </div>
 
         });  
     }
+}
 
       
     return (
@@ -47,21 +42,13 @@ function Classes({prices}) {
     
     
     <div className={styles.grid}>
-        
-        
-       
-        
+
         {listItems}
-          
         </div>
-       
-        
-        
+
     </Layout>
     )
 }
-
-
 export async function getServerSideProps() {
     
     var prices=undefined;

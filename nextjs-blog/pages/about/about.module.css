@@ -19,7 +19,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-
+  margin-right: -10%;
   z-index: 0;
 }
+
 /*Fixa var bilden är!!*/
