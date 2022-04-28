@@ -8,10 +8,14 @@ import { useEffect, useState } from 'react';
 function Classes({prices}) {
     
    
-    //console.log(prices.data[0]);
+    //console.log(prices);
+    
     //console.log(data[0].product.name);
     var listItems= "No classes to show right now."
-    if(prices!== null){
+
+    if(prices == null || prices.data.length==0){
+        console.log("HEJ");
+    } else{
         listItems = prices.data.map((element) => {
             return <div className={styles.cardImage} key={element.id}>
                 <Image 
@@ -55,17 +59,12 @@ function Classes({prices}) {
         
     </Layout>
     )
-  }
+}
+
 
 export async function getServerSideProps() {
-    // Fetch data from external API
-    /*const stripe = require('stripe')('');
-        
-    const products = await stripe.products.list({
-      limit: 3,
-    });
-*/
-    var prices=null;
+    
+    var prices=undefined;
     try{
         const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
         prices = await stripe.prices.list({
@@ -76,10 +75,6 @@ export async function getServerSideProps() {
     }catch(err){
         console.log("Catch" +err);
     }
-    
-    
-
-  
     // Pass data to the page via props
     return { props: { prices } }
   }
@@ -105,3 +100,11 @@ export async function getServerSideProps() {
         </div>
 
         */
+
+        // Fetch data from external API
+    /*const stripe = require('stripe')('');
+        
+    const products = await stripe.products.list({
+      limit: 3,
+    });
+*/
