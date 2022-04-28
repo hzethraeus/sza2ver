@@ -67,6 +67,9 @@ export default function Product({resEl}) {
       const handleClose = () => {
         setOpen(false);
       };
+      const handleBuy = () => {
+        setOpen(false);
+      };
 
   return  <div>
       
@@ -115,8 +118,8 @@ export default function Product({resEl}) {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Save changes
+          <Button autoFocus onClick={handleBuy}>
+            Buy Class
           </Button>
         </DialogActions>
       </BootstrapDialog>
