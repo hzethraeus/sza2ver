@@ -16,7 +16,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-
+import Link from 'next/link';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -60,6 +60,7 @@ BootstrapDialogTitle.propTypes = {
 
 export default function Product({resEl}) {
     //console.log(resEl);
+    const hej ="hej";
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
         console.log("HEJ");
@@ -71,6 +72,7 @@ export default function Product({resEl}) {
       const handleBuy = () => {
         setOpen(false);
         
+        
       };
 
 
@@ -79,10 +81,11 @@ export default function Product({resEl}) {
     <Card sx={{ maxWidth: 345, bgcolor: '#f7f3ec' }} onClick={handleClickOpen}>
       <CardActionArea>
         <CardMedia
+        
           component="img"
           height="140"
           image={resEl.product.images[0]}
-          alt="green iguana"
+          alt={resEl.product.description}
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
@@ -121,10 +124,19 @@ export default function Product({resEl}) {
           </Typography>
         </DialogContent>
         <DialogActions >
+        <Link href="/[pid]" as={`/${resEl.id}`}>
             
                 <Button autoFocus onClick={handleBuy}>
                     Buy Class
                 </Button>
+              
+          </Link>
+          <form action="/api/checkout_sessions" method="POST">
+    <input type="hidden" name="priceId" value={resEl.id} />
+    <Button autoFocus type="submit" role="link">
+      Checkout
+    </Button>
+    </form>
           
         </DialogActions>
       </BootstrapDialog>
