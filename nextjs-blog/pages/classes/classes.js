@@ -34,7 +34,7 @@ function Classes({prices}) {
     </Head>
     
     <Section>
-    <h1>Classes</h1>
+    <h1>+Classes</h1>
     </Section>
     
     

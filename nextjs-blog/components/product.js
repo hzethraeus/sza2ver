@@ -18,6 +18,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Link from 'next/link';
 
+
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
     padding: theme.spacing(2),
@@ -59,24 +60,26 @@ BootstrapDialogTitle.propTypes = {
 
 
 export default function Product({resEl}) {
-    console.log(resEl);
-    const hej ="hej";
+    const spots= resEl.product.metadata.spots;
+    var spotsText = "currently " + spots + " spots left";
+    if(spots<1){
+      spotsText="sold out"
+    }
+    if(spots==null){
+      spotsText="max 2ppl/private class"
+    }
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
-        console.log("HEJ");
+        
         setOpen(true);
       };
       const handleClose = () => {
         setOpen(false);
       };
-      const handleBuy = () => {
-        setOpen(false);
-        
-        
-      };
+      
 
 
-  return  <div>
+  return  <div className={styles.card}>
       
     <Card sx={{ maxWidth: 345, bgcolor: '#f7f3ec' }} onClick={handleClickOpen}>
       <CardActionArea>
@@ -93,7 +96,7 @@ export default function Product({resEl}) {
           </Typography>
           <Typography variant="body3" color="text.secondary">
           <h6>{resEl.nickname}</h6>
-          <a>{resEl.unit_amount/100}{resEl.currency}</a>
+          <a>{resEl.unit_amount/100}{resEl.currency},  {spotsText} </a>
           </Typography>
         </CardContent>
       </CardActionArea>

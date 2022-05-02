@@ -24,21 +24,26 @@ export default function About() {
     <br /> 
     Her work reflects the intersection of curiosity and familiarity. 
     <br />
+    <div className={styles.grid}>
     <div className={styles.quote}>
+    
     “In my world fabrication and craft goes hand in hand with design. 
     I see myself flourishing the most when I have the opportunity to learn new skills and explore new possibilities. 
     While teaching I would like to pass on this energy and motivate others to dive into a tactile language while playing with clay.”
+    
     </div>
-    <div className={styles.img}>
+        <div className={styles.cardImage}>
         <Image 
             src="/images/portrait.jpg" // Route of the image file
-            height={288} // Desired size with correct aspect ratio
-            width={488} // Desired size with correct aspect ratio
+            height={576} // Desired size with correct aspect ratio
+            width={976} // Desired size with correct aspect ratio
             alt="Your Name"
         />
-
+        </div>
+        
     </div>
     </div>
+    
     
     </Layout>
     )

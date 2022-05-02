@@ -1,27 +1,29 @@
 .longText {
-  width: 75%;
+  width: 80%;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1em;
   padding-top: 10px;
-  position: relative;
-  z-index: 1;
   padding-bottom: 180px;
 }
 
 .quote {
   padding: 30px;
-  margin-left: 15px;
+  font-size: 0.9em;
   font-weight: 200;
   font-style: oblique;
-  position: relative;
-  z-index: 2;
+  width: 350px;
+  height: 500px;
 }
-.img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-right: -10%;
-  z-index: 0;
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 3rem;
+}
+.cardImage {
 }
 
 /*Fixa var bilden är!!*/
