@@ -21,7 +21,7 @@ export default function Portfolio() {
         <Image 
         
         src="/images/insta/normal_pic.jpg" // Route of the image file
-        height={144} // Desired size with correct aspect ratio
+        height={244} // Desired size with correct aspect ratio
         width={244} // Desired size with correct aspect ratio
         alt="Your Name"
         />
@@ -46,11 +46,10 @@ export default function Portfolio() {
         </div>
          <div className={styles.cardImage}>
          <Image 
-      
-        src="/images/insta/normal_pic.jpg" // Route of the image file
-        height={144} // Desired size with correct aspect ratio
-        width={244} // Desired size with correct aspect ratio
-        alt="Your Name"
+            src="/images/insta/normal_pic.jpg" // Route of the image file
+            height={144} // Desired size with correct aspect ratio
+            width={244} // Desired size with correct aspect ratio
+            alt="Your Name"
         />
         </div>
           

@@ -59,7 +59,7 @@ BootstrapDialogTitle.propTypes = {
 
 
 export default function Product({resEl}) {
-    //console.log(resEl);
+    console.log(resEl);
     const hej ="hej";
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
@@ -124,17 +124,11 @@ export default function Product({resEl}) {
           </Typography>
         </DialogContent>
         <DialogActions >
-        <Link href="/[pid]" as={`/${resEl.id}`}>
-            
-                <Button autoFocus onClick={handleBuy}>
-                    Buy Class
-                </Button>
-              
-          </Link>
+        
           <form action="/api/checkout_sessions" method="POST">
     <input type="hidden" name="priceId" value={resEl.id} />
     <Button autoFocus type="submit" role="link">
-      Checkout
+      Buy class
     </Button>
     </form>
           
@@ -145,6 +139,13 @@ export default function Product({resEl}) {
 };
 
 /*
+<Link href="/[pid]" as={`/${resEl.id}`}>
+            
+                <Button autoFocus onClick={handleBuy}>
+                    Buy Class
+                </Button>
+              
+          </Link>
 <Image 
         src={resEl.product.images[0]} // Route of the image file
         height={144} // Desired size with correct aspect ratio
