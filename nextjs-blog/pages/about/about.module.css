@@ -1,5 +1,6 @@
 .longText {
   width: 80%;
+  max-width: 1000px;
   font-weight: 300;
   font-size: 1em;
   padding-top: 10px;
