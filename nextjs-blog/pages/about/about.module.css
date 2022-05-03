@@ -3,27 +3,41 @@
   font-weight: 300;
   font-size: 1em;
   padding-top: 10px;
-  padding-bottom: 180px;
+  padding-bottom: 20px;
 }
 
-.quote {
-  padding: 30px;
+.gridContainer {
+  display: grid;
+  grid-template-columns: 50px 310px 1fr 100px;
+  grid-template-rows: 50px 280px 1fr 50px;
+}
+.gridQuote {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  z-index: 2;
+  background-color: #f7f3ec;
+
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  box-shadow: 10px;
   font-size: 0.9em;
   font-weight: 200;
   font-style: oblique;
-  width: 350px;
-  height: 500px;
 }
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  margin-top: 3rem;
+.gridImage {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: -1;
 }
-.cardImage {
+@media all and (min-width: 150px) and (max-width: 800px) {
+  /* put your css styles in here */
 }
+/*
 
-/*Fixa var bilden är!!*/
+
+
+Fixa var bilden är!!*/
