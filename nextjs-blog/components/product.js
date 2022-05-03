@@ -62,15 +62,17 @@ BootstrapDialogTitle.propTypes = {
 export default function Product({resEl}) {
     const spots= resEl.product.metadata.spots;
     var spotsText = "currently " + spots + " spots left";
+    var validBuy =true;
     if(spots<1){
       spotsText="sold out"
+      validBuy=false;
     }
     if(spots==null){
       spotsText="max 2ppl/private class"
+      validBuy=true;
     }
     const [open, setOpen] = React.useState(false);
     const handleClickOpen = () => {
-        
         setOpen(true);
       };
       const handleClose = () => {
@@ -84,7 +86,6 @@ export default function Product({resEl}) {
     <Card sx={{ maxWidth: 345, bgcolor: '#f7f3ec' }} onClick={handleClickOpen}>
       <CardActionArea>
         <CardMedia
-        
           component="img"
           height="140"
           image={resEl.product.images[0]}
@@ -95,7 +96,7 @@ export default function Product({resEl}) {
           <a>{resEl.product.description}</a>
           </Typography>
           <Typography variant="body3" color="text.secondary">
-          <h6>{resEl.nickname}</h6>
+          <p>{resEl.nickname}</p>
           <a>{resEl.unit_amount/100}{resEl.currency},  {spotsText} </a>
           </Typography>
         </CardContent>
@@ -127,13 +128,18 @@ export default function Product({resEl}) {
           </Typography>
         </DialogContent>
         <DialogActions >
-        
+         {validBuy ?
           <form action="/api/checkout_sessions" method="POST">
     <input type="hidden" name="priceId" value={resEl.id} />
     <Button autoFocus type="submit" role="link">
       Buy class
     </Button>
     </form>
+    : <p>Sold Out</p>
+    
+    }
+  
+    
           
         </DialogActions>
       </BootstrapDialog>
