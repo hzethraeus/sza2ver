@@ -15,15 +15,21 @@ export default function About() {
     <h1>+ Artist Statement</h1>
     </Section>
     <div className={styles.longText}>
-    Szabinas ceramic journey started in Hawaii while apprenticing in a wood workshop. 
-    After finishing her education as a furniture maker she gradually transitioned from wood to clay. 
-    <br /> 
-    Today she runs a small, personal studio in the heart of Copenhagen, Denmark. 
-    In the creative practice she focuses on form, function and process on a multisensory level. 
-    With her objects she explores simplicity and playfulness. 
-    <br /> 
+        <div className={styles.textDiv}>
+        Szabinas ceramic journey started in Hawaii while apprenticing in a wood workshop. 
+        After finishing her education as a furniture maker she gradually transitioned from wood to clay. 
+       
+        </div>
+        <div className={styles.textDiv}>
+        Today she runs a small, personal studio in the heart of Copenhagen, Denmark. 
+        In the creative practice she focuses on form, function and process on a multisensory level. 
+        With her objects she explores simplicity and playfulness. 
+        
+        </div>
+        <div className={styles.textDiv}>
     Her work reflects the intersection of curiosity and familiarity. 
-    <br />
+   
+    </div>
     
     <div className={styles.gridContainer}>
     <div className={styles.gridQuote}>
