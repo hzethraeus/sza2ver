@@ -1,26 +1,19 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 0;
 }
-
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.indexContent {
+  z-index: 1;
+  position: inherit;
 }
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-.cardImage {
-  padding: 20px;
-}
-.welcomeText {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
-}
+/*
+<div className={styles.imgBackground}>
+      <Image 
+      src="/images/background.jpg"
+      layout="fill"
+      objectFit="cover"
+      />
+      </div>
+*/
