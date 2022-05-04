@@ -109,9 +109,7 @@ function Classes({prices}) {
         <title>Sztudio \ Classes</title>
     </Head>
     
-    <Section>
-    <h1>+Classes</h1>
-    </Section>
+    
     
     
     <div className={styles.grid}>

@@ -10,10 +10,7 @@ export default function Portfolio() {
     <Head>
         <title>Sztudio \ Portfolio</title>
     </Head>
-    <Section>
-        <h1>+Portfolio</h1>
-
-    </Section>
+    
     
     
     <div className={styles.grid}>

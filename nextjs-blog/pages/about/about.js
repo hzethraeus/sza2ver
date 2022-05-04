@@ -11,9 +11,7 @@ export default function About() {
         <title>Sztudio \ About</title>
     </Head>
     
-    <Section>
-    <h1>+ Artist Statement</h1>
-    </Section>
+    
     <div className={styles.longText}>
         <div className={styles.textDiv}>
         Szabinas ceramic journey started in Hawaii while apprenticing in a wood workshop. 
