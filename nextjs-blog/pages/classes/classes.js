@@ -84,7 +84,6 @@ function Classes({prices}) {
             setOpen(true);
         }
       }, []);
-    console.log(titlePayment);
     var listItems= "No classes to show right now."
     if(prices != null ){
         if(prices.data.length==0){

@@ -9,8 +9,8 @@ export default function Header() {
     const router=useRouter();
     var imgSrc="/images/j_logo.jpeg";
     var x ="" 
-    var imgHeight=108;
-    var imgWidth=200;
+    var imgHeight=50;
+    var imgWidth=50;
     if(typeof window !== 'undefined') {
         // detect window screen width function
         x=window.matchMedia("(max-width: 500px)")

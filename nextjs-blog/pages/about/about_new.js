@@ -24,14 +24,25 @@ export default function About() {
         </div>
         <div className={styles.textDiv}>
     Her work reflects the intersection of curiosity and familiarity. 
-   
+    <br/>
+    <a href="https://www.instagram.com/szabina.locki/" target="_blank" >Instagram</a> 
     </div>
-        </div>
-        <div className={styles.gridQuote}>
+    <div className={styles.gridQuote}>
 
+    “In my world fabrication and craft goes hand in hand with design. 
+    I see myself flourishing the most when I have the opportunity to learn new skills and explore new possibilities. 
+    While teaching I would like to pass on this energy and motivate others to dive into a tactile language while playing with clay.”
+    
         </div>
+        </div>
+        
         <div className={styles.gridImage}>
-
+        <Image 
+            src="/images/portrait.jpg" // Route of the image file
+            height={1876} // Desired size with correct aspect ratio
+            width={2742} // Desired size with correct aspect ratio
+            alt="Your Name"
+        />
         </div>
 
 
