@@ -51,8 +51,8 @@ export default function Header() {
             <Image src={imgSrc} height={imgHeight} width={imgWidth} />
    </a></div></Link>
    <div className={styles.rightSideMenu}>
-    <Link href="/about/about">
-        <a className={router.pathname== "/about/about" ? `${styles.activeTab}` :""}>
+    <Link href="/about/about_new">
+        <a className={router.pathname== "/about/about_new" ? `${styles.activeTab}` :""}>
             About
         </a>
     </Link>
