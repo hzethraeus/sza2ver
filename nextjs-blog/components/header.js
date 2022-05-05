@@ -2,10 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './header.module.css';
 import Link from 'next/link';
-
+import { useRouter } from "next/router";
 
 export default function Header() {
-
+    const router=useRouter();
+    //console.log(router.pathname.startsWith("/about/about"))
   return (
     <header>
         <div className={styles.headerAll}>
@@ -19,16 +20,22 @@ export default function Header() {
    </a></Link>
    <div className={styles.rightSideMenu}>
     <Link href="/about/about">
-        <a>About</a>
+        <a className={router.pathname== "/about/about" ? `${styles.activeTab}` :""}>
+            About
+        </a>
     </Link>
     <Link href="/portfolio/portfolio">
-        <a>Portfolio</a>
+        <a className={router.pathname== "/portfolio/portfolio" ? `${styles.activeTab}` :""}>
+            Portfolio
+        </a>
     </Link>
     <Link href="/classes/classes">
-        <a>Classes</a>
+        <a className={router.pathname== "/classes/classes" ? `${styles.activeTab}` :""}>
+            Classes
+        </a>
     </Link>
-
     </div>
   </div>
+  
     </header>
 )};

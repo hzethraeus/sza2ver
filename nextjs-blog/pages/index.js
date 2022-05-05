@@ -19,14 +19,25 @@ export default function Home() {
       />
       <div  className={styles.indexContent}>
       <Header />
-        <h1>
+        <div className={styles.midContext}>
         <Link href="/about/about">
            <a>Szabina Loki</a>
           </Link>
-          </h1>
-      
-      <Footer />
           </div>
+      
+      
+          </div>
+          <div className={styles.footerIndex}> 
+          <h6>
+                szabina.locki@gmail.com
+
+            </h6>
+        <div className={styles.lowDiv}>
+            <h6>
+            ©All rights reserved studio szabina locki 
+            </h6>
+        </div>
+            </div>
     </div>
     
   )

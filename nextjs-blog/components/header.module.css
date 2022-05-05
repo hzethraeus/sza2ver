@@ -13,3 +13,6 @@
 .rightSideMenu a {
   padding-right: 30px;
 }
+.activeTab {
+  text-decoration: underline;
+}
