@@ -5,6 +5,11 @@
   align-items: center;
   justify-content: space-between;
 }
+/*.logoImage {
+  position: relative;
+  width: 350px;
+  height: 50px;
+}*/
 
 .rightSideMenu {
   padding-right: 10px;
@@ -15,4 +20,18 @@
 }
 .activeTab {
   text-decoration: underline;
+}
+@media all and (min-width: 150px) and (max-width: 500px) {
+  .logoImage a {
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+  }
+  .rightSideMenu {
+    padding-right: 0px;
+  }
+
+  .rightSideMenu a {
+    padding-right: 10px;
+  }
 }

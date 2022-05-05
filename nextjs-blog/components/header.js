@@ -3,21 +3,53 @@ import Image from 'next/image';
 import styles from './header.module.css';
 import Link from 'next/link';
 import { useRouter } from "next/router";
+import {useEffect, useState} from 'react';
 
 export default function Header() {
     const router=useRouter();
+    var imgSrc="/images/j_logo.jpeg";
+    var x ="" 
+    var imgHeight=108;
+    var imgWidth=200;
+    if(typeof window !== 'undefined') {
+        // detect window screen width function
+        x=window.matchMedia("(max-width: 500px)")
+        if (x.matches) { // If media query matches
+            imgHeight=50;
+           imgWidth=50;
+           imgSrc="/images/j_logo_small.png";
+           
+          } else {
+            imgHeight=108;
+            imgWidth=200;
+            imgSrc="/images/j_logo.jpeg"; // Route of the image file
+           
+          }
+      }
+    
+    useEffect(()=>{
+        if (x.matches) { // If media query matches
+            imgHeight=50;
+           imgWidth=50;
+           imgSrc="/images/j_logo_small.png";
+           
+          } else {
+            imgHeight=108;
+            imgWidth=200;
+            imgSrc="/images/j_logo.jpeg"; // Route of the image file
+            
+          }
+    }, [x]);
+ 
+
     //console.log(router.pathname.startsWith("/about/about"))
   return (
     <header>
         <div className={styles.headerAll}>
-            <Link href="/"><a className={styles.logoImage}>
-                <Image
-            src="/images/j_logo.jpeg" // Route of the image file
-            height={144} // Desired size with correct aspect ratio
-            width={244} // Desired size with correct aspect ratio
-            alt="Your Name"
-            />
-   </a></Link>
+            <Link href="/">
+            <div className={styles.logoImage}><a>
+            <Image src={imgSrc} height={imgHeight} width={imgWidth} />
+   </a></div></Link>
    <div className={styles.rightSideMenu}>
     <Link href="/about/about">
         <a className={router.pathname== "/about/about" ? `${styles.activeTab}` :""}>
