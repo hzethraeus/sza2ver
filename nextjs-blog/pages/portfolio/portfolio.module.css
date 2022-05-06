@@ -3,16 +3,28 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1200px;
   margin-top: 3rem;
 }
 .cardImage {
   padding: 20px;
+  position: relative;
 }
-
-.cardImage:hover,
-.cardImage:focus,
-.cardImage:active {
-  border-color: #0070f3;
-  padding: 20px;
+.cardText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40%;
+  height: 28px;
+  text-align: center;
+  background-color: #f7f3ec64;
+}
+.cardText:hover {
+  background-color: #f7f3ec;
+}
+.cardText a {
+  vertical-align: middle;
 }

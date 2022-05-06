@@ -57,7 +57,7 @@ export default function Header() {
         </a>
     </Link>
     <Link href="/portfolio/portfolio">
-        <a className={router.pathname== "/portfolio/portfolio" ? `${styles.activeTab}` :""}>
+        <a className={router.pathname.startsWith("/portfolio/") ? `${styles.activeTab}` :""}>
             Portfolio
         </a>
     </Link>
