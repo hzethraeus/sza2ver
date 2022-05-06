@@ -7,6 +7,7 @@ import {useEffect, useState} from 'react';
 
 export default function Header() {
     const router=useRouter();
+    /*
     var imgSrc="/images/j_logo.jpeg";
     var x ="" 
     var imgHeight=50;
@@ -41,14 +42,14 @@ export default function Header() {
           }
     }, [x]);
  
-
+*/
     //console.log(router.pathname.startsWith("/about/about"))
   return (
     <header>
         <div className={styles.headerAll}>
             <Link href="/">
             <div className={styles.logoImage}><a>
-            <Image src={imgSrc} height={imgHeight} width={imgWidth} />
+            <Image src="/images/j_logo_small_no_bg.png" height={200} width={200} />
    </a></div></Link>
    <div className={styles.rightSideMenu}>
     <Link href="/about/about_new">

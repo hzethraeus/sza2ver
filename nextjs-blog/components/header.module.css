@@ -5,11 +5,10 @@
   align-items: center;
   justify-content: space-between;
 }
-/*.logoImage {
-  position: relative;
-  width: 350px;
-  height: 50px;
-}*/
+.logoImage {
+  width: 100px;
+  height: 100px;
+}
 
 .rightSideMenu {
   padding-right: 10px;
@@ -22,7 +21,12 @@
   text-decoration: underline;
 }
 @media all and (min-width: 150px) and (max-width: 500px) {
-  .logoImage a {
+  .headerAll {
+    padding-top: 10px;
+  }
+  .logoImage {
+    min-width: 50px;
+    min-height: 50px;
     width: 50px;
     height: 50px;
     padding-right: 10px;
