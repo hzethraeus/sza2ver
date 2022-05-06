@@ -1,26 +1,47 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 0;
 }
-
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.indexContent {
+  z-index: 1;
+  position: inherit;
 }
-
-.grid {
+.midContext {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  align-items: center;
+  height: 40vh;
+  font-size: 2.5em;
 }
-.cardImage {
-  padding: 20px;
+.footerIndex {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 10px;
 }
-.welcomeText {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
+@media all and (min-width: 150px) and (max-width: 950px) {
+  .lowDiv {
+    max-width: 40%;
+  }
+  .lowDiv h6 {
+    margin-left: auto;
+  }
 }
+
+/*
+<div className={styles.imgBackground}>
+      <Image 
+      src="/images/background.jpg"
+      layout="fill"
+      objectFit="cover"
+      />
+      </div>
+*/

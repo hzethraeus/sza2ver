@@ -5,16 +5,17 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+        <h6>
+                szabina.locki@gmail.com
+
+            </h6>
         <div className={styles.lowDiv}>
-            <h5>Szabina Lócki</h5>
             <h6>
-                Vestmannagade 3<br/>
-                Copenhagen <br />
-                Denmark <br />
-                szabina.locki@gmail.com <br />
-                <a href="https://www.instagram.com/szabina.locki/" target="_blank" >Instagram</a> 
+            ©All rights reserved studio szabina locki 
             </h6>
         </div>
+            
+        
         
         
        

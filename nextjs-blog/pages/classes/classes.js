@@ -84,7 +84,6 @@ function Classes({prices}) {
             setOpen(true);
         }
       }, []);
-    console.log(titlePayment);
     var listItems= "No classes to show right now."
     if(prices != null ){
         if(prices.data.length==0){
@@ -109,9 +108,7 @@ function Classes({prices}) {
         <title>Sztudio \ Classes</title>
     </Head>
     
-    <Section>
-    <h1>+Classes</h1>
-    </Section>
+    
     
     
     <div className={styles.grid}>

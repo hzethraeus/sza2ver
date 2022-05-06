@@ -1,1 +1,4 @@
 nextjs-blog/.env
+
+# Local Netlify folder
+.netlify
