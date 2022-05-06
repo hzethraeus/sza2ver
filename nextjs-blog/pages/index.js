@@ -20,7 +20,7 @@ export default function Home() {
       <div  className={styles.indexContent}>
       <Header />
         <div className={styles.midContext}>
-        <Link href="/about/about">
+        <Link href="/about/about_new">
            <a>Szabina Loki</a>
           </Link>
           </div>
