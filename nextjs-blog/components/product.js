@@ -83,11 +83,11 @@ export default function Product({resEl}) {
 
   return  <div className={styles.card}>
       
-    <Card sx={{ maxWidth: 345, bgcolor: '#f7f3ec' }} onClick={handleClickOpen}>
+    <Card sx={{ maxWidth: 805, bgcolor: '#f7f3ec' }} onClick={handleClickOpen}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="300"
           image={resEl.product.images[0]}
           alt={resEl.product.description}
         />
@@ -135,7 +135,7 @@ export default function Product({resEl}) {
       Buy class
     </Button>
     </form>
-    : <p>Sold Out</p>
+    :<p>Sold Out</p>
     
     }
   

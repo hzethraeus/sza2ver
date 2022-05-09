@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 1300px;
   margin-top: 3rem;
 }
 .cardImage {
   padding: 20px;
-  max-width: 250px;
+  max-width: 350px;
 }
 
 .cardImage:hover,
