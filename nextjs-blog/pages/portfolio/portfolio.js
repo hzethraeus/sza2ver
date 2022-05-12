@@ -17,8 +17,8 @@ export default function Portfolio() {
         <Image 
         
         src="/images/insta/normal_pic.jpg" // Route of the image file
-        height={188} // Desired size with correct aspect ratio
-        width={288} // Desired size with correct aspect ratio
+        height={216} // Desired size with correct aspect ratio
+        width={366} // Desired size with correct aspect ratio
         alt="Your Name"
         />
         <div className={styles.cardText}>
@@ -33,8 +33,8 @@ export default function Portfolio() {
          <Image 
          
         src="/images/insta/normal_pic.jpg" // Route of the image file
-        height={144} // Desired size with correct aspect ratio
-        width={244} // Desired size with correct aspect ratio
+        height={216} // Desired size with correct aspect ratio
+        width={366} // Desired size with correct aspect ratio
         alt="Your Name"
         />
          <div className={styles.cardText}>
@@ -49,8 +49,8 @@ export default function Portfolio() {
         <Image
         
         src="/images/insta/normal_pic.jpg" // Route of the image file
-        height={144} // Desired size with correct aspect ratio
-        width={244} // Desired size with correct aspect ratio
+        height={216} // Desired size with correct aspect ratio
+        width={366} // Desired size with correct aspect ratio
         alt="Your Name"
         />
          <div className={styles.cardText}>
