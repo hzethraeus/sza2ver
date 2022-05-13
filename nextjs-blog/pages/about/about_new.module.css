@@ -25,8 +25,8 @@
 
 @media all and (min-width: 150px) and (max-width: 700px) {
   .gridContainer {
-    display: grid;
-    grid-template-columns: 100%;
+    display: block;
+    /*grid-template-columns: 100%;*/
     
   }
   .gridImage {
