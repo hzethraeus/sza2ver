@@ -27,6 +27,7 @@
   .gridContainer {
     display: grid;
     grid-template-columns: 100%;
+    
   }
   .gridImage {
     padding-top: 2%;
