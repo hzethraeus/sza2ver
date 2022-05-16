@@ -29,10 +29,10 @@
 }
 @media all and (min-width: 150px) and (max-width: 950px) {
   .lowDiv {
-    max-width: 40%;
+    max-width: 50%;
   }
   .lowDiv h6 {
-    margin-left: auto;
+    padding-left: 10%;
   }
 }
 

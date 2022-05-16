@@ -34,7 +34,7 @@ export default function Home() {
             </h6>
         <div className={styles.lowDiv}>
             <h6>
-            ©All rights reserved studio szabina locki 
+            © all rights reserved studio szabina locki 
             </h6>
         </div>
             </div>
